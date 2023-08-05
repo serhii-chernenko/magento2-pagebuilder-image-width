@@ -1,0 +1,23 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_type.xsd">
+    <type name="image">
+        <appearances>
+            <appearance name="full-width">
+                <elements>
+                    <element name="desktop_image">
+                        <style name="width"
+                               source="width"
+                               converter="Magento_PageBuilder/js/converter/style/min-height"
+                        />
+                    </element>
+                    <element name="mobile_image">
+                        <style name="width-mobile"
+                               source="width"
+                               converter="Magento_PageBuilder/js/converter/style/min-height"
+                        />
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

@@ -1,0 +1,53 @@
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="width" sortOrder="25">
+        <settings>
+            <label translate="true">Width</label>
+            <collapsible>true</collapsible>
+            <opened>true</opened>
+        </settings>
+        <field name="width" formElement="input" sortOrder="10">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">100%</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Desktop</label>
+                <notice translate="true">Width can be a single number with any valid CSS unit (50px, 50%, 50em, 50vh) or a calculation (50% + 50px).</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                </additionalClasses>
+                <validation>
+                    <rule name="validate-calc" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="width-mobile" formElement="input" sortOrder="20">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">50%</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Mobile</label>
+                <notice translate="true">Width can be a single number with any valid CSS unit (50px, 50%, 50em, 50vh) or a calculation (50% + 50px).</notice>
+                <additionalClasses>
+                    <class name="admin__field-medium">true</class>
+                    <class name="admin__field-min-height-mobile-with-notice">true</class>
+                    <class name="admin__field-min-height">true</class>
+                </additionalClasses>
+                <validation>
+                    <rule name="validate-calc" xsi:type="boolean">true</rule>
+                </validation>
+                <tooltip>
+                    <description translate="true">
+                        <![CDATA[
+                        <p>Style changes will only affect this breakpoint</p>
+                        ]]>
+                    </description>
+                </tooltip>
+            </settings>
+        </field>
+    </fieldset>
+</form>
